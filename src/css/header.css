@@ -1,0 +1,76 @@
+.top-part{
+    justify-content: space-between;
+}
+
+.bottom-part{
+    justify-content: space-between;
+}
+
+.search-bar{
+    margin: auto 0;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border: none;
+}
+
+
+.bgc1{
+    background-color: #F5F5F5;
+}
+.bgc2{
+    background-color: #F05454;
+}
+.bgc3{
+    background-color: #30475E;
+}
+.bgc4{
+    background-color: #121212;
+}
+
+.c1{
+    color: #F5F5F5;
+}
+.c2{
+    color: #F05454;
+}
+.c3{
+    color: #30475E;
+}
+.c4{
+    color: #121212;
+}
+
+
+.nav-link{
+    font-weight: 400;
+}
+.nav-link:hover{
+    color: #F05454;
+}
+.nav-link:focus{
+   background-color: none;
+   color: #121212;
+}
+
+.search-icon{
+    border-color: #F05454;
+}
+.search-icon:hover{
+    border-color: #F05454;
+    background-color: #F05454;
+}
+.search-icon:active{
+    border-color: #F05454;
+    background-color: #F05454;
+}
+
+
+.link:hover{
+    color: #F05454;
+}
+
+
+
+

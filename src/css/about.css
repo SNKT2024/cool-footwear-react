@@ -1,0 +1,10 @@
+.vid {
+  background-image: url("D:/Web Development/i-Gap/React/cool_footwear/src/assets/images/about.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  
+  position: relative;
+}

@@ -1,0 +1,10 @@
+.btn-admin{
+    border: none;
+
+}
+.btn-admin:hover{
+    border: none;
+    background-color: #F5F5F5;
+    color: #F05454;
+    
+}

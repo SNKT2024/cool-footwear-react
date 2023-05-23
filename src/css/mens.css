@@ -1,0 +1,36 @@
+
+
+
+.banner{
+  background-image: url("D:\Web Development\i-Gap\React\cool_footwear\src\assets\images\cover-img-1.jpg");
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+
+
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #F05454;
+  }
+
+  .nav-tags{
+    justify-content: space-around;
+    justify-content: center;
+    position: relative;
+    top: 397px;
+  }
+  .nav{
+    justify-content: center;
+  }
+  
+  .h1-img{
+   position: relative;
+   top: 100px;
+   left: 70px;
+   margin: 0;
+   padding-right: 0;
+   display: inline;
+   
+  }

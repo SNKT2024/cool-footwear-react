@@ -1,0 +1,11 @@
+.nav-item-admin{
+    text-decoration: none;
+}
+
+.nav-item-admin:hover{
+    border-bottom: solid;
+}
+
+.innner_nav {
+    height: 100%; /* or a fixed pixel value */
+  }

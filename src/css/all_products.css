@@ -1,0 +1,25 @@
+
+
+
+
+  
+  .breadcrumb a {
+      text-decoration: none;
+      color: #F05454;
+    }
+  
+    .nav-tags{
+      justify-content: space-around;
+      justify-content: center;
+      position: relative;
+      top: 397px;
+    }
+    .nav{
+      justify-content: center;
+    }
+    
+    .h1-img{
+     position: relative;
+     top: 100px;
+     left: 70px;
+    }
