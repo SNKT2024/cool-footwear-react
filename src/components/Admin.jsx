@@ -8,11 +8,17 @@ import {
   Route,
   Routes,
   Switch,
+  useNavigate,
 } from "react-router-dom";
 
 import { Button, Col, Container, Nav, Row } from "react-bootstrap";
 
 export default function Admin() {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    navigate("/login");
+  };
   return (
     <div className="admin-wrapper pt-3 bgc1">
       <Container fluid className="">
@@ -40,7 +46,7 @@ export default function Admin() {
                 </Link>
               </Nav.Item> */}
               <Nav.Item className="m-3">
-                <Button>Logout</Button>
+                <Button onClick={handleLogout}>Logout</Button>
               </Nav.Item>
             </Nav>
           </div>

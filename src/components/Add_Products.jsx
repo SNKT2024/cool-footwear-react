@@ -16,6 +16,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 export default function Add_Proucts() {
   let { id } = useParams();
+
   const navigate = useNavigate();
 
   const [data, setData] = useState({
@@ -30,9 +31,9 @@ export default function Add_Proucts() {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+  // useEffect(() => {
+  //   console.log(data);
+  // }, [data]);
 
   // Update & Submit
   const handleSubmit = (e) => {
@@ -63,23 +64,39 @@ export default function Add_Proucts() {
 
   // GetData
 
-  const getData = () => {
-    axios
-      .get(
-        `https://646bb7ff7d3c1cae4ce43314.mockapi.io/footwear/footwear/${id}`
-      )
-      .then((res) => {
-        setData({
-          title: res.data.title,
-          category: res.data.category,
-          price: res.data.price,
-          mrp: res.data.mrp,
-          image: res.data.image,
-        });
-      });
-  };
+  // const getData = () => {
+  //   axios
+  //     .get(
+  //       `https://646bb7ff7d3c1cae4ce43314.mockapi.io/footwear/footwear/${id}`
+  //     )
+  //     .then((res) => {
+  //       setData({
+  //         title: res.data.title,
+  //         category: res.data.category,
+  //         price: res.data.price,
+  //         mrp: res.data.mrp,
+  //         image: res.data.image,
+  //       });
+  //     });
+  // };
+
   useEffect(() => {
-    getData();
+    // getData();
+    if (id != undefined) {
+      axios
+        .get(
+          `https://646bb7ff7d3c1cae4ce43314.mockapi.io/footwear/footwear/${id}`
+        )
+        .then((res) => {
+          setData({
+            title: res.data.title,
+            category: res.data.category,
+            price: res.data.price,
+            mrp: res.data.mrp,
+            image: res.data.image,
+          });
+        });
+    }
   }, []);
 
   return (

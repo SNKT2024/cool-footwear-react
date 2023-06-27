@@ -14,9 +14,11 @@ import axios from "axios";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { LinkContainer } from "react-router-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 export default function Products() {
   const [data, setData] = useState([]);
+  const navigate = useNavigate();
 
   //Get
 

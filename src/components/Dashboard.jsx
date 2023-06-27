@@ -14,8 +14,14 @@ import GroupIcon from "@mui/icons-material/Group";
 import users from "../assets/images/user.png";
 import bag from "../assets/images/bag.png";
 import order from "../assets/images/order.png";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
+  const navigate = useNavigate();
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (!isLoggedIn) {
+    navigate("/login");
+  }
   return (
     <div className="dashboard-wrapper bgc1">
       <Container>
@@ -41,6 +47,7 @@ export default function Dashboard() {
                 <Card.Body>
                   <Card.Img src={users} />
                   <hr />
+
                   <Button className="bgc4 btn-admin">Users</Button>
                 </Card.Body>
               </Card>
@@ -53,7 +60,9 @@ export default function Dashboard() {
                 <Card.Body>
                   <Card.Img src={bag} />
                   <hr />
-                  <Button className="bgc4 btn-admin">Products</Button>
+                  <Link to={"/admin/products"}>
+                    <Button className="bgc4 btn-admin">Products</Button>
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>
@@ -65,7 +74,9 @@ export default function Dashboard() {
                 <Card.Body>
                   <Card.Img src={order} />
                   <hr />
-                  <Button className="bgc4 btn-admin">Orders</Button>
+                  <Link to={"/admin/add_products/"}>
+                    <Button className="bgc4 btn-admin">Add Products</Button>
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>

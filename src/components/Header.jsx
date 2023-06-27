@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
+
 import {
   Button,
   Col,
@@ -19,6 +21,8 @@ import { Link } from "react-router-dom";
 import "../css/color.css";
 
 export default function Header() {
+  let cart = useSelector((state) => state.cart);
+
   return (
     <div className="top-menu-wrapper bgc1">
       <Container>
@@ -71,7 +75,7 @@ export default function Header() {
                       </Link>
                     </Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
+                  {/* <Nav.Item>
                     <Nav.Link className="c3 nav-link">
                       <Link
                         to={"/all_products"}
@@ -80,7 +84,7 @@ export default function Header() {
                         ALL PRODUCTS
                       </Link>
                     </Nav.Link>
-                  </Nav.Item>
+                  </Nav.Item> */}
                   <Nav.Item>
                     <Nav.Link className="c3 nav-link">
                       <Link
@@ -115,7 +119,7 @@ export default function Header() {
                   <Nav.Item>
                     <Nav.Link className="c3 nav-link">
                       <Link
-                        to={"/admin/dashboard"}
+                        to={"/login"}
                         className="text-decoration-none c3 link"
                       >
                         ADMIN LOGIN
@@ -127,8 +131,10 @@ export default function Header() {
                   <div className="cart m-auto">
                     <Nav.Item>
                       <Nav.Link className="c3 nav-link">
-                        <ShoppingCartIcon />
-                        CART [0]
+                        <Link to={"/cart"} className="text-decoration-none c3">
+                          <ShoppingCartIcon />
+                          CART [{cart.length}]
+                        </Link>
                       </Nav.Link>
                     </Nav.Item>
                   </div>
